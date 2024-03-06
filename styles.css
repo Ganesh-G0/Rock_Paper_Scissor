@@ -1,0 +1,45 @@
+body {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #9290c3;
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-size: cover;  
+}
+h1 {
+  font-size: 2.5rem;
+}
+#playersPick {
+  color: #ebf400;
+}
+#botsPick {
+  color: #f57d1f;
+}
+#won {
+  align-self: center;
+  color: #f72798;
+  text-align: center;
+}
+button {
+  border: 0;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: blueviolet;
+}
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .btn-group {
+    flex-direction: row;
+  }
+}
