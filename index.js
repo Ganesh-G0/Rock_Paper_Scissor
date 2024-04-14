@@ -48,19 +48,13 @@ function winner() {
 $('.btn-group').click(() => { winner(); $('#score').show(); $("#result").show(); })
 
 $("#toggle").click(() => {
- if ($("body").hasClass("dark-mode")) {
-   $('body').removeClass('dark-mode')
-   $('body').addClass('light-mode')
+  if ($("body").hasClass('dark-mode')) {
+    $('body').removeClass('dark-mode');
+    $('body').addClass('light-mode');
+    $(".gg-sun").addClass('d-none'); $(".gg-moon").removeClass('d-none');
   } else {
-    $('body').removeClass('light-mode')
-    $('body').addClass('dark-mode')    
- }
-  if ($('body').hasClass('dark-mode')) { 
-    $(".gg-moon").addClass("d-none");
-    $(".gg-sun").removeClass("d-none");
-  } else {
-    $(".gg-sun").addClass("d-none");
-    $(".gg-moon").removeClass("d-none");
+    $('body').removeClass('light-mode');
+    $('body').addClass('dark-mode');
+    $(".gg-sun").removeClass('d-none'); $(".gg-moon").addClass('d-none'); 
   }
-
 })
