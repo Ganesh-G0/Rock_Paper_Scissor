@@ -1,18 +1,18 @@
 .dark-mode {
   --text: #ffffff;
-    --background: #000000;
-    --primary:#5798b2;
-    --accent: #e95494;
-    --linearPrimaryAccent: linear-gradient(#8fb3ff, #d32872);
-    --linearSecondaryAccent: linear-gradient(#d31366, #bb497a);
+  --accent: #e95494;
+  --primary:#5798b2;
+  --background: #000000;
+  --linearPrimaryAccent: linear-gradient(#8fb3ff, #d32872);
+  --linearSecondaryAccent: linear-gradient(#d31366, #bb497a);
   }
 .light-mode {
-    --text: #000000;
-    --background: #ffffff;
-    --primary: #5798b2;
-    --accent: #e95494;
-    --linearPrimaryAccent: linear-gradient(#8fb3ff, #ebf1ff);
-    --linearSecondaryAccent: linear-gradient(#d31366, #bb497a);
+  --text: #000000;
+  --accent: #e95494;
+  --primary: #5798b2;
+  --background: #ffffff;
+  --linearPrimaryAccent: linear-gradient(#8fb3ff, #ebf1ff);
+  --linearSecondaryAccent: linear-gradient(#d31366, #bb497a);
 }
 * {
   margin: 0;
@@ -20,35 +20,41 @@
   box-sizing: border-box;
 }
 html { font-size: 62.5%; }
-.d-none { display: none; }
 body {
   height: 100dvh;
   text-align: center;
   color: var(--text);
   background-color: var(--background);
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
 }
+.d-none { display: none; }
 header {
   display: flex;
-  justify-content: space-around;
-  height: 5dvh;
+  justify-content: space-between;
+  margin: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 header > h1 { font-size: 3rem;  }
 main {
-  height: 95dvh;
-  margin: 2rem;
+
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 3rem;
 }
-h1 {
-  color: var(--accent);
-}
+h1 { color: var(--accent); }
 button {
   border: 0;
   color: white;
-  cursor: pointer;
+  cursor: pointer;  
   font-size: 2.5rem;
   padding: 1rem 1.5rem;
   border-radius: .4rem;
@@ -56,48 +62,48 @@ button {
 }
 .gg-sun, .gg-moon { color: white; }
 #playersPick, #botsPick { color: var(--primary); }
-
 #toggle {
   color: var(--text);
   background: var(--linearSecondaryAccent);
 }
 #result {
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  text-align: center;
   gap: 2rem;
   margin-bottom: 2rem;
   font-size: 2rem;
 }
+.btn-group {  
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
 #score {
   font-weight: 700;
   font-size: 2.5rem;
-  display: flex;
+  display: flex; 
   justify-content: center;
   align-items: center;
+  justify-content: space-between;
   gap: 4rem;
 }
-.btn-group {  
-  max-width: 32rem;
-  width: 50%;
-  margin: 0 auto;
-  display: flex; 
-  flex-direction: column;
-  justify-content: center;
-  gap: 2rem;
+#score > div > p {
+  margin: 1rem;
 }
+
 @media (min-width: 76rem) {
-  main {
-    font-size: 5rem;  
-  }
   #result,
   #score {
     font-size: 3rem;
   }  
   .btn-group {
-    max-width: 100%;
     flex-direction: row;
+  }
+  button {
+    font-size: 4rem;
   }
 }
