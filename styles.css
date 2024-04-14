@@ -1,45 +1,107 @@
+.dark-mode {
+  --text: #ffffff;
+    --background: #000000;
+    --primary:#5798b2;
+    --accent: #d72d77;
+    --linearPrimaryAccent: linear-gradient(#8fb3ff, #d32872);
+    --linearSecondaryAccent: linear-gradient(#d31366, #bb497a);
+  }
+.light-mode {
+    --text: #000000;
+    --background: #ffffff;
+    --primary: #5798b2;
+    --accent: #d22872;
+    --linearPrimaryAccent: linear-gradient(#8fb3ff, #ebf1ff);
+    --linearSecondaryAccent: linear-gradient(#d31366, #bb497a);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html { font-size: 62.5%; }
+.d-none { display: none; }
 body {
   height: 100dvh;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
-  color: #9290c3;
-  background-color: #000000;
-  background-repeat: no-repeat;
-  background-size: cover;  
+  color: var(--text);
+  background-color: var(--background);
+  text-align: center;
+}
+main {
+  width: 98%;
+  height: 98%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+}
+main > h1 {
+  font-size: 4rem;  
 }
 h1 {
-  font-size: 2.5rem;
-}
-#playersPick {
-  color: #ebf400;
-}
-#botsPick {
-  color: #f57d1f;
-}
-#won {
-  align-self: center;
-  color: #f72798;
-  text-align: center;
+  color: var(--accent);
 }
 button {
   border: 0;
   color: white;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   padding: 1rem 1.5rem;
-  border-radius: 0.5rem;
-  background-color: blueviolet;
+  border-radius: .4rem;
+  background: var(--linearSecondaryAccent);
 }
-.btn-group {
+.gg-sun, .gg-moon { color: white; }
+#playersPick, #botsPick { color: var(--primary); }
+#toggle {
+  top: 1rem;
+  right: 1rem;
+  position: absolute;
+  color: var(--text);
+  background: var(--linearSecondaryAccent);
+}
+#result {
+  text-align: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
 }
-@media (min-width: 768px) {
+#score {
+  font-weight: 700;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+.btn-group {  
+  max-width: 32rem;
+  width: 50%;
+  margin: 0 auto;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+@media (min-width: 76rem) {
+  main > 
+  h1 {
+    font-size: 6rem;  
+  }
+  #result,
+  #score {
+    font-size: 3rem;
+  }  
   .btn-group {
+    max-width: 100%;
     flex-direction: row;
   }
 }
