@@ -4,20 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock Paper Scissor Game</title>
+  <link rel="stylesheet" href="https://css.gg/css?=|moon|sun">
   <link rel="stylesheet" href="styles.css">
-  <script defer src="index.js" type="module"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" type="module"></script>
+  <!-- <script defer src="index.js" type="module"></script> -->
+  <script src="newIndex.js" type="module"></script>
 </head>
-<body>
-  <h1>Rock Paper Scissor</h1>
-  <div id="result">
-    <h1><span id="won"></span> </h1>
-    <h2>&#128128; You Chose: <span id="playersPick"> </span></h2>
-    <h2>&#129302; Bot Chose: <span id="botsPick"> </span></h2>
-  </div>
-  <div class="btn-group">
-    <button id="rock">&#9994;Rock</button>
-    <button id="paper">&#9996;Paper</button>
-    <button id="scissor">&#9995;Scissor</button>
-  </div>  
+<body class="dark-mode">
+  <main>
+    <button id="toggle">
+      <i class="gg-sun d-none"></i>
+      <i class="gg-moon"></i>
+    </button>
+    <h1>Rock Paper Scissor</h1>
+    <div id="result">
+      <h1><span id="winnerIs"></span> </h1>
+      <h2>&#128128; You Picked: <span id="playersPick"> </span></h2>
+      <h2>&#129302; Bots Picked: <span id="botsPick"> </span></h2>
+    </div>
+    <div class="btn-group">
+      <button id="rock">&#9994;Rock</button>
+      <button id="paper">&#9996;Paper</button>
+      <button id="scissor">&#9995;Scissor</button>
+    </div> 
+    <div id="score">
+      <h1>Scores</h1>
+      <div>
+        <p>You: <span id="playerScore"></span></p>
+        <p>Bot: <span id="botScore"></span></p>
+      </div>
+    </div>     
+  </main>
 </body>
 </html>
